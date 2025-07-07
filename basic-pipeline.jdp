@@ -1,0 +1,31 @@
+pipeline {
+    agent any 
+    stages {
+        stage('github') { 
+            steps {
+               git branch: 'main', credentialsId: 'github', url: 'https://github.com/Bhushan-88/Jenkins-01.git'
+            }
+        }
+        stage('list-file') { 
+            steps {
+                sh 'ls'
+             }
+          }
+        stage('test') { 
+            steps {
+                echo 'test stage'
+             }
+          }
+        stage('pre-prod-deploy') { 
+            steps {
+                echo 'pre-prod-deploy stage'
+             }
+          }
+        stage('prod-deploy') { 
+            steps {
+                echo 'prod-deploy stage'
+             }
+          }
+
+       }
+  }
