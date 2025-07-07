@@ -23,4 +23,3 @@ install plugin --> Pipeline
 1. Declarative pipeleine
 2. Scripted pipeline
 
-
